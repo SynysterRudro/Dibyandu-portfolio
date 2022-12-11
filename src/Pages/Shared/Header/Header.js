@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import resume from '../../../assests/Dibyandu_Singha_Resume.pdf';
 
 const Header = () => {
 
     const lists = <>
-        <li><Link>Item 1</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><a rel="noreferrer" target='_blank' href='https://form.jotform.com/223441842845458'>Contact</a></li>
     </>
 
     return (
@@ -20,7 +22,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-xl">PortFolio</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">PortFolio</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -29,7 +31,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
+                    <a className='btn btn-primary' href={resume} download>Resume</a>
                 </div>
             </div>
         </div>
